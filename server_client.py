@@ -17,21 +17,21 @@ rserver.listen()
 
 
 while True:
-    client, addr = rserver.accept()
+    client, addr = rserver.accept() # クライアント情報取得
     time = datetime.datetime.now()
-    msg = "繋がった〜"
+    msg = "繋がった〜" # message
     print(time, msg)
     print(client)
 
     try:
         while True:
-            data = client.recv(size)
+            data = client.recv(size) # クライアントからのデータ
             if not data:
                 break
             print(data.decode("utf-8"))
     except:
         print("Error|多分,クライアント側がクローズした")
-    client.sendall(msg.encode("utf-8"))
+    client.sendall(msg.encode("utf-8")) # クライアントにデータ送信
     client.close()
 
     """別サーバーにデータを送る"""
@@ -39,4 +39,3 @@ while True:
     sclient.connect((shost, port))
     sclient.sendall(data)
     sclient.close()
-
