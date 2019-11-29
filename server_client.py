@@ -28,7 +28,6 @@ while True:
             if not data:
                 break
             print(data.decode("utf-8"))
-            print(data.decode("utf-8"), file=fout)
     except:
         print("Error|多分,クライアント側がクローズした")
     client.sendall(msg.encode("utf-8"))
