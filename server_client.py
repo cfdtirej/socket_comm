@@ -10,6 +10,7 @@ shost = "192.168.30.145"
 port = 5678
 size = 4096
 
+"""このコンピュータのソケット"""
 rserver = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 rserver.bind((rhost,port))
 rserver.listen()
