@@ -1,5 +1,5 @@
 """
-list_dict_send.pyが送ってきたデータを受け取る
+list_dict_client.pyが送ってきたデータを受け取る
 """
 import socket, datetime
 
