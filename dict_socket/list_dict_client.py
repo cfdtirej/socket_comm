@@ -1,5 +1,5 @@
 """
-list_dict_.pyにデータ転送
+list_dict_server.pyにデータ転送
 ディクショナリ形式のデータをループで回してサーバーに転送する
 """
 import socket
