@@ -1,0 +1,14 @@
+{
+    "InfluxDB":{
+        "host":"",
+        "port":8086,
+        "username":"",
+        "password":"",
+        "database":""
+    },
+    "socket":{
+        "host":"0.0.0.0",
+        "port":,
+        "size":8192
+    }
+}
