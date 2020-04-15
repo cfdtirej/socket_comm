@@ -12,7 +12,7 @@ from influxdb import InfluxDBClient
 
 # load recv_data_write_db.json
 conf_dir_path = os.path.normpath('%s/../conf_dir' %__file__)
-json_conf_path = os.path.join(conf_dir_path, "recv_data_write_db.json")
+json_conf_path = os.path.join(conf_dir_path, "config.json")
 print(json_conf_path)
 f = open(json_conf_path, "r", encoding="UTF-8")
 conf_file = json.load(f)
