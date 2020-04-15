@@ -1,5 +1,13 @@
-""" Receive data from client and Write receive data to InfluxDB """
-import os, json, socket, datetime, sys, time, csv
+#Receive data from client and Write receive data to InfluxDB
+
+import csv
+import datetime
+import json
+import os
+import socket
+import sys
+import time
+
 from influxdb import InfluxDBClient
 
 # load recv_data_write_db.json
@@ -23,8 +31,9 @@ db_client = InfluxDBClient(
     database = conf_file["InfluxDB"]["database"]
     )
 
-""" def function for receive data from client and write data to InfluxDB """
+
 def write_db():
+""" def function for receive data from client and write data to InfluxDB """
     try:
         recv_srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         recv_srv.bind((recv_host,recv_port))
@@ -58,5 +67,7 @@ def write_db():
         writer.writerow([start_datetime, fin_datetime, fin_time])        
     client.close()
     sys.exit()
+
+
 write_db()
 
